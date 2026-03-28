@@ -135,6 +135,27 @@ export default function Index() {
           >
             Generate a product
           </s-button>
+
+          <s-button
+            onClick={() => {
+              shopify.intents.invoke?.("create:shopify/Discount", {
+                value: fetcher.data?.product?.id,
+              });
+            }}
+          >
+            Create discount
+          </s-button>
+
+          <s-button
+            onClick={() => {
+              shopify.intents.invoke?.("create:shopify/Collection", {
+                value: fetcher.data?.product?.id,
+              });
+            }}
+          >
+            Create Collection
+          </s-button>
+
           {fetcher.data?.product && (
             <s-button
               onClick={() => {
@@ -149,6 +170,7 @@ export default function Index() {
             </s-button>
           )}
         </s-stack>
+
         {fetcher.data?.product && (
           <s-section heading="productCreate mutation">
             <s-stack direction="block" gap="base">

@@ -26,3 +26,12 @@ scopes = "write_products"
 
 [auth]
 redirect_urls = [ "https://example.com/api/auth" ]
+
+
+[product.metafields.app.internal_sku]
+name = "Internal SKU"
+description = "Internal inventory tracking code"
+type = "single_line_text_field"
+
+# Merchants can view and edit
+access.admin = "merchant_read_write"
