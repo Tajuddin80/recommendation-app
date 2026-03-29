@@ -1,5 +1,5 @@
 {
-  "name": "recommendation-app",
+  "name": "easy-product-recommendations",
   "private": true,
   "scripts": {
     "build": "react-router build",
@@ -24,6 +24,7 @@
     "node": ">=20.19 <22 || >=22.12"
   },
   "dependencies": {
+    "@flydotio/litestream": "^1.0.1",
     "@prisma/client": "^6.16.3",
     "@react-router/dev": "^7.12.0",
     "@react-router/fs-routes": "^7.12.0",
@@ -31,7 +32,7 @@
     "@react-router/serve": "^7.12.0",
     "@shopify/app-bridge-react": "^4.2.4",
     "@shopify/shopify-app-react-router": "^1.1.0",
-    "@shopify/shopify-app-session-storage-prisma": "^9.0.0",
+    "@shopify/shopify-app-session-storage-prisma": "^8.0.0",
     "isbot": "^5.1.31",
     "prisma": "^6.16.3",
     "react": "^18.3.1",
@@ -40,8 +41,9 @@
     "vite-tsconfig-paths": "^5.1.4"
   },
   "devDependencies": {
+    "@flydotio/dockerfile": "^0.7.10",
     "@shopify/api-codegen-preset": "^1.2.0",
-    "@shopify/polaris-types": "1.0.1",
+    "@shopify/polaris-types": "^1.0.1",
     "@types/eslint": "^9.6.1",
     "@types/node": "^22.18.8",
     "@types/react": "^18.3.25",
@@ -68,5 +70,8 @@
   "overrides": {
     "p-map": "^4.0.0"
   },
-  "author": "Taj uddin"
+  "author": "hujjat",
+  "dockerfile": {
+    "litestream": true
+  }
 }
